@@ -1,0 +1,322 @@
+
+---
+title: "Welcome"
+output: pdf_document
+---
+
+
+
+Welcome to BIOL 3140, Experimental Methods in Organismal Biology!!! 
+
+Organismal biology is the study of living systems of all scales that shape the structure, function, ecology, and evolution of individual organisms. Experiments that elucidate how organisms respond to biotic and abiotic environmental stimulus over broad time scales—from changes in behavior to adaptation—are crucial to understanding biological diversity. In this course we’ll explore the concepts and experimental and analytical tools that frame research in organismal biology. Through group projects and active learning exercises, students will make hypotheses concerning how organisms respond in time, space, and behavior to changes in environment and then design experiments and instrument prototypes that produce data to evaluate these hypotheses. Topics covered will include reconstructing phylogenetic history and the evolution of organismal form and function, evaluating form-function relationships, and the correlates of spatial and temporal distribution of organisms. In addition, the development of an analytical toolbox—specifically, learning the principles of data science and statistical analysis—is a central theme of this course.
+
+<style>
+div.green { background-color:#c7d1c0; border-radius: 5px; padding: 20px;}
+</style>
+
+<div class = "green">
+<div class="row">
+  <div class="col-sm-2"><a class="far fa-sticky-note fa-5x" style="color:#939681"></a> <!-- regular style --></div>
+  <div class="col-sm-9">This is a highly technical course and will surely challenge all us. BIOL 3140 is designed for folks with no coding or prototyping experience, so at many times in the course, a student will feel lost and confused. ***This is exactly where we want to be!*** This is where the learning happens. 
+</div>
+</div>
+</div>
+<br>
+
+# Course and Instructor Deets
+
+**Delivery:** Flipped and *synchronous online meetings* M,W,F at 2:00 over Zoom accessible through [this link](https://bccte.zoom.us/j/98903480269?pwd=MVBFUlhqTTE1LzFFRUVpTzZ2S1Vsdz09). 
+
+**Instructor:** Christopher P. Kenaley (Prof. K)
+
+**email:** kenaley [ahhhht] bc.edu
+
+**office hours:** By appointment
+
+# Course materials
+
+  + Personal computer (with USB2/3 ports, or see below) [Required]
+  + Inexpensive webcam (>$40 on [Amazon](https://www.amazon.com/dp/B088FPBNQF/ref=cm_sw_r_tw_dp_x_D1spFbCD9BK0R)) [Required]
+  + A USB/USBc adapter for reading microSD cards [e.g.,for newer macs](https://www.amazon.com/dp/B07RL5L8ZL/ref=cm_sw_r_tw_dp_x_EE-oFbWCT79QA) [optional]
+  + A USBc adapter for USB2 connection [e.g.,for newer macs](https://www.amazon.com/dp/B07RL5L8ZL/ref=cm_sw_r_tw_dp_x_EE-oFbWCT79QA) [optional]
+  + [GitHub account](https://github.com/join) [Required]
+  + Course DAQpack (see blow) [Provided]
+
+## Course hardware
+Why require a webcam? This will be essential for remotely trouble shooting our Arduino based instruments (e.g., over Zoom). Set up your webcam in an overhead position so that it records a part of a desk or table from above. I'll do the sames so that we both have a clear view of our hardware systems and thus can compare and demonstrate. You may find that a purchasing [an inexpensive overhead stand](https://www.amazon.com/dp/B086MLVDG4/ref=cm_sw_r_tw_dp_x_R-spFb2F4TM3Z) will help, although this may be unnecessary with a little luck and ingenuity. 
+
+What about those optional adapters? Our Arduino units require connections to a standard USB (i.e., USB2 or 3) port on your computer. For more recent Mac and PC laptops that have only USBc, this will require an adapter. Similarly, to read data from a microSD card (required for a Phase II project), you may need an adapter. Fortunately, many adapter models---like the one linked above---include both USB2/3 and microSD interfaces.
+
+## GitHub account
+
+Why a [GitHub account](https://github.com/join)? GitHub is a handy place for those developing code and offers free hosting of websites produced and maintained from a desktop (that's how this site was constructed). Our site is under the ``class" repository (i.e., a space where code resides) within the organization [bcorgbio](https://github.com/bcorgbio) on GitHub. To access  our organization, create a team, and use bcorgbio discussion pages, you'll need an account. Once you have an account, I'll be able to add you to our [bcorgbio](https://github.com/bcorgbio) organization and the class-wide team for discussion purposes.
+
+## Course DAQPack
+
+This is pre-packaged assembly of hardware required for all the course instrumentation projects. Every student in the class will be issued a DAQPack on the first week of class. **Take care of these components!!!** Put these items in a safe, dry place until you need to use them. All materials must be returned at the end of the class.
+
+
+# Course scope, goals, and objectives
+
+To be an effective organismal biologist, one we must prepare, analyze, visualize, and communicate data as we formulate answers to the questions we're asking. Despite the importance of these technological skills to our discipline, students often see the acquisition and analysis of data as technological black boxes. Countless times in previous courses, instructors have no doubt demonstrated foundational principles and concepts through the presentation of data, usually through figures in papers or lecture slides. However, where these data come from and how they have answered a question often remain a mystery. In turn, students must rely on the authority of their instructors rather than their own grasp of quantitative skills and data collection to make meaningful connections.
+
+As a course-based research experience, BIOL 3140 is meant to develop and hone skills related to instrumentation and data science in the context of organismal biology. The thrust of this course will center around the development of simple sensor-data acquisition systems and the analysis of data collected from them. Through hands-on design and fabrication of sensor-based instrument prototypes representing models of more complex instrumentation, students will develop a direct relationship with the source of data in scientific research. 
+
+<div class = "green">
+<div class="row">
+  <div class="col-sm-2"><a class="far fa-sticky-note fa-5x" style="color:#939681"></a> <!-- regular style --></div>
+  <div class="col-sm-9">As was mentioned at the top, students will often feel adrift, unsure of how to proceed. This is by design and a model of how experimental work and data analysis in biology unfolds. Nonetheless, students may worry about their grade in the course and how to do well when challenges emerge at every turn. Fear not! For each assignment in the course (e.g., module project reports) student or team engagement and effort will be assessed just as much as how well objective questions have been answered. 
+</div>
+</div>
+</div>
+<br>
+
+ 
+
+
+## Course goals and objectives
+
+With respect to instrumentation, the learning goals of this program include:
+
+1.	Understanding how common sensors convert physical phenomena into electrical signals.
+2.	Familiarity with the basics of signal conditioning, amplification, and the conversion of sensor signals into a form that can be converted into digital values.
+3.	Understanding the basics of analog-to-digital conversion and digital signal acquisition.
+4.	Development of basic programming skills that permit flexible repurposing of a common data-acquisition system.
+ 
+The specific learning objectives of our instrumentation work include:
+ 
+1.	Development of 3 instruments which detect temperature, force, and acceleration in human subjects.
+2.	Assembly and programming of an Arduino-based data-acquisition system to process and condition signals from a variety of sensor types.
+ 
+For students in the natural sciences, perhaps more important than understanding how data is acquired is understanding how to analyze data in the context of answering a specific question. To this end, we will pursue the following data science learning goals that include:
+ 
+1.	Learning how to import data into a computing environment.
+2.	Understanding basic tidying and transforming (i.e., wrangling) operations of data to answer scientific questions.
+3.	Developing competency in basic data visualization.
+4.	Learning how to model data in the context of answering a scientific question.
+5.	Executing the critical basics of communication in a data science framework.
+                                  
+All of these data-science learning goals will be realized in the framework of the R computing environment. Using R, students will open the black box of data analysis and pursue these specific objectives:
+           
+1.	Import, tidy, and transform sensor data so that specific scientific questions can be asked.
+2.	Visualize sensor data in the R environment using ggplot, an elegant and versatile tool for data visualization.
+3.	Evaluate a-priori scientific questions within a modeling framework, rejecting or accepting hypotheses according to model expectations.
+4.	Communicate answers in concise reports, leveraging R's fast and reproducible markdown capabilities.
+
+
+# Course format and expectations
+
+To quote Joseph Chamberlain, ". . . We are living in most interesting times." A course of this scope, focusing on so much that is technical, would be administered best in small groups, meeting mostly face-to-face. However, in the context of a global pandemic that seems primed to surge again in our corner of the world, I can't in good conscience summon us all to meet in cramped quarters. Thus, it seems prudent to ``flip" our 3140 experience and make most of it virtual. This will require students to read and explore outside of class and meet in pre-assigned smaller groups (i.e., teams) on their own to work through the material. I will be available during our set meeting times for discussion and problem solving over Zoom and face-to-face during arranged office hours. 
+
+## Teams and team responsibilities
+To facilitate our team approach, I'll be assigning each student to a team of 4 students. This team must establish two things:
+
+  1. A unique team name. Puns are welcome and encouraged (e.g., "R-tful Coders") 
+  2. A team discussion on GitHub that includes me on the team (see [Discussion Board]). 
+  
+Each week, teams should use their team discussion boards to generate a question to post on the the class-wide discussion board. A team representative must submit this question and include the team handle in the title surrounded by brackets, like you see below for that make-believe team "R-tful codes" with the handle "@bcorgbio/r-tful-coders". The team must also decide which question to answer and then post their feedback or answer addressing the handle for the original team posters (see below)
+
+<center>
+![FigName](discexamp.jpg)
+</center>
+<br>
+
+## Expectations for Students
+
+A flipped course, especially one of this technical nature, will require sublime concentration and focus. Therefore, we must be clear about our expectations of one another. 
+
+  + You, the student, are responsible for reading and adhering to all aspects of the course syllabus as outlined here on this site.
+  + You are responsible for organizing and completing all readings, discussions, exercises, and projects.
+  + You are responsible for becoming familiar with course-related software (R, RStudio, Arduino, Zoom).
+  + You must be aware of your own progress in the course.
+  + It is up to you to pursue help and guidance when you feel you need it.
+
+## Expectations for the Instructor
+  + I will challenge students intellectually to develop data analysis and experimental skills.
+  + I will make expectations clear in the form of this site, syllabus, and course announcements made here and over email.
+  + I will be consistent and quick in grading assignments.
+  + I will be available to help and discuss topics during scheduled class time, arranged office hours, and on our class [discussion board](https://github.com/orgs/bcorgbio/teams/biol-3140) .
+
+
+# Discussion Board 
+
+Most weeks, a representative from your team you will be asked to submit at least one question and answer another on our class [discussion board](https://github.com/orgs/bcorgbio/teams/biol-3140). This is hosted on GitHub, just like our course site and will certainly be an important resource as you work through course material. When you post a question, you should:
+
+  + Be polite and concise.
+  + Ask a question that has not be asked before.
+  + Post the question with a short descriptive title (e.g.., ``Problems with temp sensor wiring" )
+  
+When responding to a question, you should:
+
+  + Be polite and concise
+  + Provide unique feedback rather than a duplicated answer.
+  
+Feel free to post reactions (via the smiley-face icon above the text box), but this won't count as an answer.
+  
+A team representative is welcome to add another answer to a question that has already been answered as long as it expands upon the previous answers.  I'll be moderating and commenting myself, issuing feedback at the end of each week. 
+
+Each team is required to make their own discussion board. Please add me to the team as well so that I can monitor questions and provide feedback. This is meant to provide a means to communicate within a team and synthesis of a question to post each week; however any Q&A on a team discussion board **DOES NOT** satisfy the general discussion requirement. You can learn more about making team discussion boards on GitHub [here](https://docs.github.com/en/github/building-a-strong-community/creating-a-team-discussion).
+
+
+
+# Course Outline
+<br>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+
+<div class = "row">
+  
+<div class = "col-md-4">
+<center><b>Phase I</b></center>
+<br>
+<p style="text-align: center;">
+<a class="fab fa-leanpub fa-5x"></a> <!-- regular style -->
+</p>
+<br>
+
+<center><b>The Basics</b></center>
+
+</div>
+  
+<div class = "col-md-4">
+<center><b>Phase II</b></center>
+<br>
+<p style="text-align: center;">
+<a class="fas fa-toolbox fa-5x"></a> <!-- regular style -->
+</p>
+<br>
+
+<center><b>Developing a Toolbox</b></center>
+
+
+
+
+
+</div>
+  
+<div class = "col-md-4">
+<center><b>Phase III</b></center>
+<br>
+<p style="text-align: center;">
+<a class="fas fa-ruler fa-5x"></a> <!-- regular style -->
+<a class="fas fa-plus fa-2x"></a>
+<a class="fas fa-chart-line fa-5x"></a> <!-- regular style -->
+</p>
+<br>
+
+<center><b>Independent projects</b></center>
+
+</div>
+</div>
+<br>
+
+
+## Phase I: Learning the Basics
+
+In this phase, we'll learn the basics of instrumentation and data analysis by working through 5 learning modules devoted to instrument design and data analysis. This will most likely be the most challenging part of the course in that many, if not most of you will not have ever designed and built instruments and data acquisition systems, let alone analyzed data from them. There might be a lot of head banging, encountering hurdle after hurdle. Rest assured, your experience will be curated, sticking to the bare bones of instrument design and data science. This introductory phase will set the groundwork for Phase II, the development of a prototyping and data analytics toolbox.
+
+Modules for Phase I include:
+
+  
+  1. **Data Pirates Code with. . . .** R, Introduction to the Basics
+  2. **Data Wrangling:** Introduction to Tools of the Trade in Data Analysis
+  3. **The Whiz and Viz Bang of Data:** The Basics of Data Visualization and Modeling
+  4. **Making Messes Pretty:** Leveraging Markdown to Produce Pleasing Reports
+  5. **Cheap Tricks in Physiology:** Designing and Programming Simple, Low-Cost Data Acquisition Systems
+
+## Phase II: Developing a Toolbox
+
+In Phase II, we'll use our new-found instrument- and code-development skills to address key questions in organismal biology. These will be largely guided explorations of instrument design and use and data analysis meant to challenge you to put these skills to good use in answering how vertebrates muscles work, how size and phylogeny matters in physiological systems, and how a changing climate impacts the distribution of vertebrates. Within this phase we'll break up into teams of 3-4 students to focus on 5 modules, some data driven, the others both data and instrument driven, including:
+
+  1. **Hot Flashes I:** Scaling of Diel Temperature Oscillations in Mammals (instrument and data driven)
+  2. **Hot Flashes II:** Not So Fast! Correcting Scaling Models Within a Phylogenetic Context (data driven)
+  3. **Beach Muscles:** Exploring Force-Length Relationships in Vertebrate Muscle (instrument and data driven)
+  4. **Birds of a Feather Migrate Together . . . Sometimes:** Using EBird data to Explore the Phenology of Passerine Migration  (data driven)
+  5.  ~~**Jumping UGs:** Testing the Limits of Human Lower Body Power (instrument and data driven)~~
+  
+For each module of Phase II, you'll be asked to read one or two important topic papers to set the stage and provide crucial context and then move on to data acquisition, analysis, and synthesis. The end product of each module will be a short, 3-4 page markdown that includes some background, description of methods, results, and discussion within the context of the topic papers and other relevant research. 
+
+## Phase III: Independent Project
+
+In Phase III, you'll be tasked with quickly developing a project of your own design that requires the fabrication of a new or modified data acquisition system. The goal of this project is the use your sensor to answer a question personal and interesting to your team (assembled during Phase II). The question should be new within the context of the course and reflect a comparative focus (i.e., not simply a human-based project). This project will require you to first delve into the the scientific literature to set the stage and then leverage your new data-analysis and report-writing skills in the synthesis of 4-5 page markdown. This final project report should follow the same format and requirements of the reports produced in Phase II, but with expanded content. 
+
+
+# Course Assessment
+
+Your grade will be based on five assignment components: Asking and answering questions on our discussion board and series of project reports: 5 for Phase I projects, 5 for Phase II projects, and one for the Phase III project. 
+
+***
+
+### Grade Breakdown
+----------------------  ------------  --------------------    
+                                        **Points**            
+     
+ Discussion Q&A                        100                             
+  
+ Phase I Projects                      5x10
+ 
+ Phase II Projects                     5x50
+ 
+ Phase III Project                     1x100
+ 
+                        **total**       **500**
+---------------------- ------------   --------------     
+
+***
+
+<br>
+
+The discussion portion of your grade will be calculated by determining the percentage of times your team both asked and answered a question when assigned to (usually once per week) and multiplying this by 100. That is, if you are asked to submit 15 questions and answers over the course of the semester and post and answer 12, your discussion points will equal 80. A discussion assignment will be considered complete if and only if a question is posted AND another answered. 
+
+
+More details about the specific requirements of Phase I, II, and III projects can be found under our "Projects" tab at the top of this page. 
+
+
+<div class = "green">
+<div class="row">
+  <div class="col-sm-2"><a class="far fa-sticky-note fa-5x" style="color:#939681"></a> <!-- regular style --></div>
+  <div class="col-sm-9">As a reminder, assessment for project reports will incorporate an evaluation of an individual's or team's effort and engagement in addition to more objective components (i.e., answers, conclusions, etc.). To do well, the formula is simple: students and their teams should remain persistent, ask for guidance, and make clear conclusions using the skills and tools they learn in the course.
+</div>
+</div>
+</div>
+<br>
+
+
+
+
+# Accommodation and Accessibility
+
+Boston College is committed to providing accommodations to students, faculty, staff and visitors with disabilities. Specific documentation from the appropriate office is required for students seeking accommodation in Woods College courses. Advanced notice and formal registration with the appropriate office is required to facilitate this process. There are two separate offices at BC that coordinate services for students with disabilities:
+
+  + [The Connors Family Learning Center (CFLC)](http://www.bc.edu/libraries/help/tutoring.html) coordinates services for students with LD and ADHD.
+  + [The Disabilities Services Office (DSO)](http://www.bc.edu/offices/dos/subsidiary_offices/disabilityservices.html) coordinates services for all other disabilities.
+
+Find out more about BC’s commitment to accessibility at www.bc.edu/sites/accessibility.
+
+# Scholarship and Academic Integrity
+
+Students in this course, as all others at BC, must produce original work and cite references appropriately. Failure to cite references is plagiarism. Academic dishonesty includes, but is not necessarily limited to, plagiarism, fabrication, facilitating academic dishonesty, cheating on exams or assignments, or submitting the same material or substantially similar material to meet the requirements of more than one course without seeking permission of all instructors concerned. Scholastic misconduct may also involve, but is not necessarily limited to, acts that violate the rights of other students, such as depriving another student of course materials or interfering with another student’s work. Please see the [Boston College policy on academic integrity](https://www.bc.edu/content/bc-web/academics/sites/university-catalog/policies-procedures.html#academic_integrity_policies) for more information.
+
+# Email and Office Hours Policy
+
+If you write Professor Kenaley with a question, he’ll try to get back to you within 24 hours. If you don’t receive a response, it’s likely because the answer to your question is available here or on our discussion site. Rather than write Prof. Kenaley with questions related to course mechanics and expectations, please post these in our [discussion board](https://github.com/orgs/bcorgbio/teams/biol-3140), It’s probably the case that others have the same questions.
+
+Office hours can be arranged by appointment via email and will take place over Zoom. Office hours may involve more more than studen or team, so please come equipped with poignant questions and expect that other students have questions as urgent as yours.
+
+
+
+&nbsp;
+<hr />
+<p style="text-align: center;">Cobbled together by <a href="https://kenaleylab.com">Chris Kenaley</a></p>
+<p style="text-align: center;"><span style="color: #808080;"><em>kenaley@bc.edu</em></span></p>
+
+
+
+<!-- Add font awesome icons -->
+<p style="text-align: center;">
+    <a href="https://github.com/ckenaley/" class="fab fa-github"></a>
+</p>
+
+&nbsp;

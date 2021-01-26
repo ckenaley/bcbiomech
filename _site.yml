@@ -1,0 +1,60 @@
+name: "BIOL 5380 Topics in Biomechanics"
+output_dir: "."
+output:  
+  html_document:  
+    self_contained: no  
+    theme: sandstone
+    highlight: tango
+    toc: true # adds a table of contents
+    toc_float: true
+    number_sections: FALSE
+    css: style.css
+navbar: 
+  title: "BIOL 3140"
+  left: 
+    - text: "Home"
+      href: index.html
+    - text: "Schedule"
+      href: schedule.html
+    - text: "Projects"
+      menu:
+        - text: "Phase I"
+        - text: "Phase I report rubric"
+          href: phaseI_rubric.html
+        - text: "Module 1 Project"
+          href: mod1_proj.html
+        - text: "Module 2 Project"
+          href: mod2_proj.html
+        - text: "Module 3 Project"
+          href: mod3_proj.html
+        - text: "Module 4 Project"
+          href: mod4_proj.html
+        - text: "Module 5 Project"
+          href: mod5_proj.html
+        - text: "Phase II"
+        - text: "Phase II report rubric"
+          href: phaseII_rubric.html
+        - text: "Module 6 Project"
+          href: mod6_proj.html
+        - text: "Module 7 Project"
+          href: mod7_proj.html
+        - text: "Module 8 Project"
+          href: mod8_proj.html
+        - text: "Module 9 Project"
+          href: mod9_proj.html
+        - text: "Phase III"
+        - text: "Phase III report rubric"
+          href: phaseIII_rubric.html
+        - text: "Final Project"
+          href: final_proj.html
+        - text: "DaqPacks"
+        - text: "DaqPack Item List"
+          href: daqpack.html
+    - text: "BIOL 3140 Discussion"
+      href: https://github.com/orgs/bcorgbio/teams/biol-3140
+      
+    
+ 
+    
+    
+ 
