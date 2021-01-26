@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Welcome</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 61px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h2 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h3 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h4 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h5 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h6 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">BIOL 3140</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="schedule.html">Schedule</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Projects
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Phase I</li>
+    <li>
+      <a href="phaseI_rubric.html">Phase I report rubric</a>
+    </li>
+    <li>
+      <a href="mod1_proj.html">Module 1 Project</a>
+    </li>
+    <li>
+      <a href="mod2_proj.html">Module 2 Project</a>
+    </li>
+    <li>
+      <a href="mod3_proj.html">Module 3 Project</a>
+    </li>
+    <li>
+      <a href="mod4_proj.html">Module 4 Project</a>
+    </li>
+    <li>
+      <a href="mod5_proj.html">Module 5 Project</a>
+    </li>
+    <li class="dropdown-header">Phase II</li>
+    <li>
+      <a href="phaseII_rubric.html">Phase II report rubric</a>
+    </li>
+    <li>
+      <a href="mod6_proj.html">Module 6 Project</a>
+    </li>
+    <li>
+      <a href="mod7_proj.html">Module 7 Project</a>
+    </li>
+    <li>
+      <a href="mod8_proj.html">Module 8 Project</a>
+    </li>
+    <li>
+      <a href="mod9_proj.html">Module 9 Project</a>
+    </li>
+    <li class="dropdown-header">Phase III</li>
+    <li>
+      <a href="phaseIII_rubric.html">Phase III report rubric</a>
+    </li>
+    <li>
+      <a href="final_proj.html">Final Project</a>
+    </li>
+    <li class="dropdown-header">DaqPacks</li>
+    <li>
+      <a href="daqpack.html">DaqPack Item List</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="https://github.com/orgs/bcorgbio/teams/biol-3140">BIOL 3140 Discussion</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Welcome</h1>
+
+</div>
+
+
+<p>Welcome to BIOL 3140, Experimental Methods in Organismal Biology!!!</p>
+<p>Organismal biology is the study of living systems of all scales that shape the structure, function, ecology, and evolution of individual organisms. Experiments that elucidate how organisms respond to biotic and abiotic environmental stimulus over broad time scales—from changes in behavior to adaptation—are crucial to understanding biological diversity. In this course we’ll explore the concepts and experimental and analytical tools that frame research in organismal biology. Through group projects and active learning exercises, students will make hypotheses concerning how organisms respond in time, space, and behavior to changes in environment and then design experiments and instrument prototypes that produce data to evaluate these hypotheses. Topics covered will include reconstructing phylogenetic history and the evolution of organismal form and function, evaluating form-function relationships, and the correlates of spatial and temporal distribution of organisms. In addition, the development of an analytical toolbox—specifically, learning the principles of data science and statistical analysis—is a central theme of this course.</p>
+<style>
+div.green { background-color:#c7d1c0; border-radius: 5px; padding: 20px;}
+</style>
+<div class="green">
+<div class="row">
+<div class="col-sm-2">
+<a class="far fa-sticky-note fa-5x" style="color:#939681"></a> <!-- regular style -->
+</div>
+<div class="col-sm-9">
+<p>This is a highly technical course and will surely challenge all us. BIOL 3140 is designed for folks with no coding or prototyping experience, so at many times in the course, a student will feel lost and confused. <strong><em>This is exactly where we want to be!</em></strong> This is where the learning happens.</p>
+</div>
+</div>
+</div>
+<p><br></p>
+<div id="course-and-instructor-deets" class="section level1">
+<h1>Course and Instructor Deets</h1>
+<p><strong>Delivery:</strong> Flipped and <em>synchronous online meetings</em> M,W,F at 2:00 over Zoom accessible through <a href="https://bccte.zoom.us/j/98903480269?pwd=MVBFUlhqTTE1LzFFRUVpTzZ2S1Vsdz09">this link</a>.</p>
+<p><strong>Instructor:</strong> Christopher P. Kenaley (Prof. K)</p>
+<p><strong>email:</strong> kenaley [ahhhht] bc.edu</p>
+<p><strong>office hours:</strong> By appointment</p>
+</div>
+<div id="course-materials" class="section level1">
+<h1>Course materials</h1>
+<ul>
+<li>Personal computer (with USB2/3 ports, or see below) [Required]</li>
+<li>Inexpensive webcam (&gt;$40 on <a href="https://www.amazon.com/dp/B088FPBNQF/ref=cm_sw_r_tw_dp_x_D1spFbCD9BK0R">Amazon</a>) [Required]</li>
+<li>A USB/USBc adapter for reading microSD cards <a href="https://www.amazon.com/dp/B07RL5L8ZL/ref=cm_sw_r_tw_dp_x_EE-oFbWCT79QA">e.g.,for newer macs</a> [optional]</li>
+<li>A USBc adapter for USB2 connection <a href="https://www.amazon.com/dp/B07RL5L8ZL/ref=cm_sw_r_tw_dp_x_EE-oFbWCT79QA">e.g.,for newer macs</a> [optional]</li>
+<li><a href="https://github.com/join">GitHub account</a> [Required]</li>
+<li>Course DAQpack (see blow) [Provided]</li>
+</ul>
+<div id="course-hardware" class="section level2">
+<h2>Course hardware</h2>
+<p>Why require a webcam? This will be essential for remotely trouble shooting our Arduino based instruments (e.g., over Zoom). Set up your webcam in an overhead position so that it records a part of a desk or table from above. I’ll do the sames so that we both have a clear view of our hardware systems and thus can compare and demonstrate. You may find that a purchasing <a href="https://www.amazon.com/dp/B086MLVDG4/ref=cm_sw_r_tw_dp_x_R-spFb2F4TM3Z">an inexpensive overhead stand</a> will help, although this may be unnecessary with a little luck and ingenuity.</p>
+<p>What about those optional adapters? Our Arduino units require connections to a standard USB (i.e., USB2 or 3) port on your computer. For more recent Mac and PC laptops that have only USBc, this will require an adapter. Similarly, to read data from a microSD card (required for a Phase II project), you may need an adapter. Fortunately, many adapter models—like the one linked above—include both USB2/3 and microSD interfaces.</p>
+</div>
+<div id="github-account" class="section level2">
+<h2>GitHub account</h2>
+<p>Why a <a href="https://github.com/join">GitHub account</a>? GitHub is a handy place for those developing code and offers free hosting of websites produced and maintained from a desktop (that’s how this site was constructed). Our site is under the ``class" repository (i.e., a space where code resides) within the organization <a href="https://github.com/bcorgbio">bcorgbio</a> on GitHub. To access our organization, create a team, and use bcorgbio discussion pages, you’ll need an account. Once you have an account, I’ll be able to add you to our <a href="https://github.com/bcorgbio">bcorgbio</a> organization and the class-wide team for discussion purposes.</p>
+</div>
+<div id="course-daqpack" class="section level2">
+<h2>Course DAQPack</h2>
+<p>This is pre-packaged assembly of hardware required for all the course instrumentation projects. Every student in the class will be issued a DAQPack on the first week of class. <strong>Take care of these components!!!</strong> Put these items in a safe, dry place until you need to use them. All materials must be returned at the end of the class.</p>
+</div>
+</div>
+<div id="course-scope-goals-and-objectives" class="section level1">
+<h1>Course scope, goals, and objectives</h1>
+<p>To be an effective organismal biologist, one we must prepare, analyze, visualize, and communicate data as we formulate answers to the questions we’re asking. Despite the importance of these technological skills to our discipline, students often see the acquisition and analysis of data as technological black boxes. Countless times in previous courses, instructors have no doubt demonstrated foundational principles and concepts through the presentation of data, usually through figures in papers or lecture slides. However, where these data come from and how they have answered a question often remain a mystery. In turn, students must rely on the authority of their instructors rather than their own grasp of quantitative skills and data collection to make meaningful connections.</p>
+<p>As a course-based research experience, BIOL 3140 is meant to develop and hone skills related to instrumentation and data science in the context of organismal biology. The thrust of this course will center around the development of simple sensor-data acquisition systems and the analysis of data collected from them. Through hands-on design and fabrication of sensor-based instrument prototypes representing models of more complex instrumentation, students will develop a direct relationship with the source of data in scientific research.</p>
+<div class="green">
+<div class="row">
+<div class="col-sm-2">
+<a class="far fa-sticky-note fa-5x" style="color:#939681"></a> <!-- regular style -->
+</div>
+<div class="col-sm-9">
+<p>As was mentioned at the top, students will often feel adrift, unsure of how to proceed. This is by design and a model of how experimental work and data analysis in biology unfolds. Nonetheless, students may worry about their grade in the course and how to do well when challenges emerge at every turn. Fear not! For each assignment in the course (e.g., module project reports) student or team engagement and effort will be assessed just as much as how well objective questions have been answered.</p>
+</div>
+</div>
+</div>
+<p><br></p>
+<div id="course-goals-and-objectives" class="section level2">
+<h2>Course goals and objectives</h2>
+<p>With respect to instrumentation, the learning goals of this program include:</p>
+<ol style="list-style-type: decimal">
+<li>Understanding how common sensors convert physical phenomena into electrical signals.</li>
+<li>Familiarity with the basics of signal conditioning, amplification, and the conversion of sensor signals into a form that can be converted into digital values.</li>
+<li>Understanding the basics of analog-to-digital conversion and digital signal acquisition.</li>
+<li>Development of basic programming skills that permit flexible repurposing of a common data-acquisition system.</li>
+</ol>
+<p>The specific learning objectives of our instrumentation work include:</p>
+<ol style="list-style-type: decimal">
+<li>Development of 3 instruments which detect temperature, force, and acceleration in human subjects.</li>
+<li>Assembly and programming of an Arduino-based data-acquisition system to process and condition signals from a variety of sensor types.</li>
+</ol>
+<p>For students in the natural sciences, perhaps more important than understanding how data is acquired is understanding how to analyze data in the context of answering a specific question. To this end, we will pursue the following data science learning goals that include:</p>
+<ol style="list-style-type: decimal">
+<li>Learning how to import data into a computing environment.</li>
+<li>Understanding basic tidying and transforming (i.e., wrangling) operations of data to answer scientific questions.</li>
+<li>Developing competency in basic data visualization.</li>
+<li>Learning how to model data in the context of answering a scientific question.</li>
+<li>Executing the critical basics of communication in a data science framework.</li>
+</ol>
+<p>All of these data-science learning goals will be realized in the framework of the R computing environment. Using R, students will open the black box of data analysis and pursue these specific objectives:</p>
+<ol style="list-style-type: decimal">
+<li>Import, tidy, and transform sensor data so that specific scientific questions can be asked.</li>
+<li>Visualize sensor data in the R environment using ggplot, an elegant and versatile tool for data visualization.</li>
+<li>Evaluate a-priori scientific questions within a modeling framework, rejecting or accepting hypotheses according to model expectations.</li>
+<li>Communicate answers in concise reports, leveraging R’s fast and reproducible markdown capabilities.</li>
+</ol>
+</div>
+</div>
+<div id="course-format-and-expectations" class="section level1">
+<h1>Course format and expectations</h1>
+<p>To quote Joseph Chamberlain, “. . . We are living in most interesting times.” A course of this scope, focusing on so much that is technical, would be administered best in small groups, meeting mostly face-to-face. However, in the context of a global pandemic that seems primed to surge again in our corner of the world, I can’t in good conscience summon us all to meet in cramped quarters. Thus, it seems prudent to ``flip" our 3140 experience and make most of it virtual. This will require students to read and explore outside of class and meet in pre-assigned smaller groups (i.e., teams) on their own to work through the material. I will be available during our set meeting times for discussion and problem solving over Zoom and face-to-face during arranged office hours.</p>
+<div id="teams-and-team-responsibilities" class="section level2">
+<h2>Teams and team responsibilities</h2>
+<p>To facilitate our team approach, I’ll be assigning each student to a team of 4 students. This team must establish two things:</p>
+<ol style="list-style-type: decimal">
+<li>A unique team name. Puns are welcome and encouraged (e.g., “R-tful Coders”)</li>
+<li>A team discussion on GitHub that includes me on the team (see <a href="#discussion-board">Discussion Board</a>).</li>
+</ol>
+<p>Each week, teams should use their team discussion boards to generate a question to post on the the class-wide discussion board. A team representative must submit this question and include the team handle in the title surrounded by brackets, like you see below for that make-believe team “R-tful codes” with the handle “<span class="citation">@bcorgbio/r-tful-coders</span>”. The team must also decide which question to answer and then post their feedback or answer addressing the handle for the original team posters (see below)</p>
+<center>
+<img src="discexamp.jpg" title="fig:" alt="FigName" />
+</center>
+<p><br></p>
+</div>
+<div id="expectations-for-students" class="section level2">
+<h2>Expectations for Students</h2>
+<p>A flipped course, especially one of this technical nature, will require sublime concentration and focus. Therefore, we must be clear about our expectations of one another.</p>
+<ul>
+<li>You, the student, are responsible for reading and adhering to all aspects of the course syllabus as outlined here on this site.</li>
+<li>You are responsible for organizing and completing all readings, discussions, exercises, and projects.</li>
+<li>You are responsible for becoming familiar with course-related software (R, RStudio, Arduino, Zoom).</li>
+<li>You must be aware of your own progress in the course.</li>
+<li>It is up to you to pursue help and guidance when you feel you need it.</li>
+</ul>
+</div>
+<div id="expectations-for-the-instructor" class="section level2">
+<h2>Expectations for the Instructor</h2>
+<ul>
+<li>I will challenge students intellectually to develop data analysis and experimental skills.</li>
+<li>I will make expectations clear in the form of this site, syllabus, and course announcements made here and over email.</li>
+<li>I will be consistent and quick in grading assignments.</li>
+<li>I will be available to help and discuss topics during scheduled class time, arranged office hours, and on our class <a href="https://github.com/orgs/bcorgbio/teams/biol-3140">discussion board</a> .</li>
+</ul>
+</div>
+</div>
+<div id="discussion-board" class="section level1">
+<h1>Discussion Board</h1>
+<p>Most weeks, a representative from your team you will be asked to submit at least one question and answer another on our class <a href="https://github.com/orgs/bcorgbio/teams/biol-3140">discussion board</a>. This is hosted on GitHub, just like our course site and will certainly be an important resource as you work through course material. When you post a question, you should:</p>
+<ul>
+<li>Be polite and concise.</li>
+<li>Ask a question that has not be asked before.</li>
+<li>Post the question with a short descriptive title (e.g.., ``Problems with temp sensor wiring" )</li>
+</ul>
+<p>When responding to a question, you should:</p>
+<ul>
+<li>Be polite and concise</li>
+<li>Provide unique feedback rather than a duplicated answer.</li>
+</ul>
+<p>Feel free to post reactions (via the smiley-face icon above the text box), but this won’t count as an answer.</p>
+<p>A team representative is welcome to add another answer to a question that has already been answered as long as it expands upon the previous answers. I’ll be moderating and commenting myself, issuing feedback at the end of each week.</p>
+<p>Each team is required to make their own discussion board. Please add me to the team as well so that I can monitor questions and provide feedback. This is meant to provide a means to communicate within a team and synthesis of a question to post each week; however any Q&amp;A on a team discussion board <strong>DOES NOT</strong> satisfy the general discussion requirement. You can learn more about making team discussion boards on GitHub <a href="https://docs.github.com/en/github/building-a-strong-community/creating-a-team-discussion">here</a>.</p>
+</div>
+<div id="course-outline" class="section level1">
+<h1>Course Outline</h1>
+<p><br></p>
+<!-- Add icon library -->
+<p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"></p>
+<div class="row">
+<div class="col-md-4">
+<center>
+<b>Phase I</b>
+</center>
+<br>
+<p style="text-align: center;">
+<a class="fab fa-leanpub fa-5x"></a> <!-- regular style -->
+</p>
+<p><br></p>
+<center>
+<b>The Basics</b>
+</center>
+</div>
+<div class="col-md-4">
+<center>
+<b>Phase II</b>
+</center>
+<br>
+<p style="text-align: center;">
+<a class="fas fa-toolbox fa-5x"></a> <!-- regular style -->
+</p>
+<p><br></p>
+<center>
+<b>Developing a Toolbox</b>
+</center>
+</div>
+<div class="col-md-4">
+<center>
+<b>Phase III</b>
+</center>
+<br>
+<p style="text-align: center;">
+<a class="fas fa-ruler fa-5x"></a> <!-- regular style --> <a class="fas fa-plus fa-2x"></a> <a class="fas fa-chart-line fa-5x"></a> <!-- regular style -->
+</p>
+<p><br></p>
+<center>
+<b>Independent projects</b>
+</center>
+</div>
+</div>
+<p><br></p>
+<div id="phase-i-learning-the-basics" class="section level2">
+<h2>Phase I: Learning the Basics</h2>
+<p>In this phase, we’ll learn the basics of instrumentation and data analysis by working through 5 learning modules devoted to instrument design and data analysis. This will most likely be the most challenging part of the course in that many, if not most of you will not have ever designed and built instruments and data acquisition systems, let alone analyzed data from them. There might be a lot of head banging, encountering hurdle after hurdle. Rest assured, your experience will be curated, sticking to the bare bones of instrument design and data science. This introductory phase will set the groundwork for Phase II, the development of a prototyping and data analytics toolbox.</p>
+<p>Modules for Phase I include:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Data Pirates Code with. . . .</strong> R, Introduction to the Basics</li>
+<li><strong>Data Wrangling:</strong> Introduction to Tools of the Trade in Data Analysis</li>
+<li><strong>The Whiz and Viz Bang of Data:</strong> The Basics of Data Visualization and Modeling</li>
+<li><strong>Making Messes Pretty:</strong> Leveraging Markdown to Produce Pleasing Reports</li>
+<li><strong>Cheap Tricks in Physiology:</strong> Designing and Programming Simple, Low-Cost Data Acquisition Systems</li>
+</ol>
+</div>
+<div id="phase-ii-developing-a-toolbox" class="section level2">
+<h2>Phase II: Developing a Toolbox</h2>
+<p>In Phase II, we’ll use our new-found instrument- and code-development skills to address key questions in organismal biology. These will be largely guided explorations of instrument design and use and data analysis meant to challenge you to put these skills to good use in answering how vertebrates muscles work, how size and phylogeny matters in physiological systems, and how a changing climate impacts the distribution of vertebrates. Within this phase we’ll break up into teams of 3-4 students to focus on 5 modules, some data driven, the others both data and instrument driven, including:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Hot Flashes I:</strong> Scaling of Diel Temperature Oscillations in Mammals (instrument and data driven)</li>
+<li><strong>Hot Flashes II:</strong> Not So Fast! Correcting Scaling Models Within a Phylogenetic Context (data driven)</li>
+<li><strong>Beach Muscles:</strong> Exploring Force-Length Relationships in Vertebrate Muscle (instrument and data driven)</li>
+<li><strong>Birds of a Feather Migrate Together . . . Sometimes:</strong> Using EBird data to Explore the Phenology of Passerine Migration (data driven)</li>
+<li><del><strong>Jumping UGs:</strong> Testing the Limits of Human Lower Body Power (instrument and data driven)</del></li>
+</ol>
+<p>For each module of Phase II, you’ll be asked to read one or two important topic papers to set the stage and provide crucial context and then move on to data acquisition, analysis, and synthesis. The end product of each module will be a short, 3-4 page markdown that includes some background, description of methods, results, and discussion within the context of the topic papers and other relevant research.</p>
+</div>
+<div id="phase-iii-independent-project" class="section level2">
+<h2>Phase III: Independent Project</h2>
+<p>In Phase III, you’ll be tasked with quickly developing a project of your own design that requires the fabrication of a new or modified data acquisition system. The goal of this project is the use your sensor to answer a question personal and interesting to your team (assembled during Phase II). The question should be new within the context of the course and reflect a comparative focus (i.e., not simply a human-based project). This project will require you to first delve into the the scientific literature to set the stage and then leverage your new data-analysis and report-writing skills in the synthesis of 4-5 page markdown. This final project report should follow the same format and requirements of the reports produced in Phase II, but with expanded content.</p>
+</div>
+</div>
+<div id="course-assessment" class="section level1">
+<h1>Course Assessment</h1>
+<p>Your grade will be based on five assignment components: Asking and answering questions on our discussion board and series of project reports: 5 for Phase I projects, 5 for Phase II projects, and one for the Phase III project.</p>
+<hr />
+<div id="grade-breakdown" class="section level3">
+<h3>Grade Breakdown</h3>
+<table style="width:88%;">
+<colgroup>
+<col width="33%" />
+<col width="19%" />
+<col width="34%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td align="center"><strong>Points</strong></td>
+</tr>
+<tr class="even">
+<td>Discussion Q&amp;A</td>
+<td></td>
+<td align="center">100</td>
+</tr>
+<tr class="odd">
+<td>Phase I Projects</td>
+<td></td>
+<td align="center">5x10</td>
+</tr>
+<tr class="even">
+<td>Phase II Projects</td>
+<td></td>
+<td align="center">5x50</td>
+</tr>
+<tr class="odd">
+<td>Phase III Project</td>
+<td></td>
+<td align="center">1x100</td>
+</tr>
+<tr class="even">
+<td></td>
+<td><strong>total</strong></td>
+<td align="center"><strong>500</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><br></p>
+<p>The discussion portion of your grade will be calculated by determining the percentage of times your team both asked and answered a question when assigned to (usually once per week) and multiplying this by 100. That is, if you are asked to submit 15 questions and answers over the course of the semester and post and answer 12, your discussion points will equal 80. A discussion assignment will be considered complete if and only if a question is posted AND another answered.</p>
+<p>More details about the specific requirements of Phase I, II, and III projects can be found under our “Projects” tab at the top of this page.</p>
+<div class="green">
+<div class="row">
+<div class="col-sm-2">
+<a class="far fa-sticky-note fa-5x" style="color:#939681"></a> <!-- regular style -->
+</div>
+<div class="col-sm-9">
+<p>As a reminder, assessment for project reports will incorporate an evaluation of an individual’s or team’s effort and engagement in addition to more objective components (i.e., answers, conclusions, etc.). To do well, the formula is simple: students and their teams should remain persistent, ask for guidance, and make clear conclusions using the skills and tools they learn in the course.</p>
+</div>
+</div>
+</div>
+<p><br></p>
+</div>
+</div>
+<div id="accommodation-and-accessibility" class="section level1">
+<h1>Accommodation and Accessibility</h1>
+<p>Boston College is committed to providing accommodations to students, faculty, staff and visitors with disabilities. Specific documentation from the appropriate office is required for students seeking accommodation in Woods College courses. Advanced notice and formal registration with the appropriate office is required to facilitate this process. There are two separate offices at BC that coordinate services for students with disabilities:</p>
+<ul>
+<li><a href="http://www.bc.edu/libraries/help/tutoring.html">The Connors Family Learning Center (CFLC)</a> coordinates services for students with LD and ADHD.</li>
+<li><a href="http://www.bc.edu/offices/dos/subsidiary_offices/disabilityservices.html">The Disabilities Services Office (DSO)</a> coordinates services for all other disabilities.</li>
+</ul>
+<p>Find out more about BC’s commitment to accessibility at www.bc.edu/sites/accessibility.</p>
+</div>
+<div id="scholarship-and-academic-integrity" class="section level1">
+<h1>Scholarship and Academic Integrity</h1>
+<p>Students in this course, as all others at BC, must produce original work and cite references appropriately. Failure to cite references is plagiarism. Academic dishonesty includes, but is not necessarily limited to, plagiarism, fabrication, facilitating academic dishonesty, cheating on exams or assignments, or submitting the same material or substantially similar material to meet the requirements of more than one course without seeking permission of all instructors concerned. Scholastic misconduct may also involve, but is not necessarily limited to, acts that violate the rights of other students, such as depriving another student of course materials or interfering with another student’s work. Please see the <a href="https://www.bc.edu/content/bc-web/academics/sites/university-catalog/policies-procedures.html#academic_integrity_policies">Boston College policy on academic integrity</a> for more information.</p>
+</div>
+<div id="email-and-office-hours-policy" class="section level1">
+<h1>Email and Office Hours Policy</h1>
+<p>If you write Professor Kenaley with a question, he’ll try to get back to you within 24 hours. If you don’t receive a response, it’s likely because the answer to your question is available here or on our discussion site. Rather than write Prof. Kenaley with questions related to course mechanics and expectations, please post these in our <a href="https://github.com/orgs/bcorgbio/teams/biol-3140">discussion board</a>, It’s probably the case that others have the same questions.</p>
+<p>Office hours can be arranged by appointment via email and will take place over Zoom. Office hours may involve more more than studen or team, so please come equipped with poignant questions and expect that other students have questions as urgent as yours.</p>
+ 
+<hr />
+<p style="text-align: center;">
+Cobbled together by <a href="https://kenaleylab.com">Chris Kenaley</a>
+</p>
+<p style="text-align: center;">
+<span style="color: #808080;"><em><a href="mailto:kenaley@bc.edu" class="email">kenaley@bc.edu</a></em></span>
+</p>
+<!-- Add font awesome icons -->
+<p style="text-align: center;">
+<a href="https://github.com/ckenaley/" class="fab fa-github"></a>
+</p>
+<p> </p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
